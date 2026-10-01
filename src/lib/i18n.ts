@@ -13,11 +13,11 @@ export interface Lang {
     hidden?: boolean;
 }
 
-export const defaultLang: Lang = {
-    name: "English",
-    endonym: "English",
-    code: "en",
-    loader: () => import("../i18n/en.json")
+export const defaultLang: Lang = { 
+    name: "Russian", 
+    endonym: "Русский язык", 
+    code: "ru", 
+    loader: () => import("../i18n/ru.json") 
 };
 
 // Endonyms: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
@@ -25,7 +25,7 @@ export const supportedLangs: Lang[] = [
     { name: "Czech", endonym: "Čeština", code: "cs", loader: () => import("../i18n/cs.json") },
     { name: "Danish", endonym: "Dansk", code: "da", loader: () => import("../i18n/da.json") },
     { name: "Dutch", endonym: "Nederlands", code: "nl", loader: () => import("../i18n/nl.json") },
-    defaultLang,
+    { name: "English", endonym: "English", code: "en", loader: () => import("../i18n/en.json") },
     { name: "French", endonym: "Français", code: "fr", loader: () => import("../i18n/fr.json") },
     { name: "German", endonym: "Deutsch", code: "de", loader: () => import("../i18n/de.json") },
     { name: "Greek", endonym: "Νέα Ελληνικά", code: "el", loader: () => import("../i18n/el.json") },
@@ -50,7 +50,7 @@ export const supportedLangs: Lang[] = [
     { name: "Persian", endonym: "فارسی", code: "fa", loader: () => import("../i18n/fa.json"), rtl: true },
     { name: "Polish", endonym: "Polski", code: "pl", loader: () => import("../i18n/pl.json") },
     { name: "Portuguese", endonym: "Português", code: "pt", loader: () => import("../i18n/pt.json") },
-    { name: "Russian", endonym: "Русский язык", code: "ru", loader: () => import("../i18n/ru.json") },
+    defaultLang,
     { name: "Spanish", endonym: "Español", code: "es", loader: () => import("../i18n/es.json") },
     { name: "Swedish", endonym: "Svenska", code: "sv", loader: () => import("../i18n/sv.json") },
     { name: "Ukrainian", endonym: "Українська", code: "uk", loader: () => import("../i18n/uk.json") },
